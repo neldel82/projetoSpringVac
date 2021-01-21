@@ -39,9 +39,9 @@ public class User {
 
     @Column(name = "senha", length = 30, nullable = false)
     private String password;
-
-    @OneToMany(mappedBy = "id_usuario") // atributo na classe Comunidade
-    @JsonIgnoreProperties("id_usuario") // atributo do 'Comunidade' que não deve ser preenchido
+/* 
+    @OneToMany(mappedBy = "usuario") // atributo na classe Comunidade
+    @JsonIgnoreProperties("usuario") // atributo do 'Comunidade' que não deve ser preenchido
     private List<Comunidade> comunidades;
-
+ */
 }

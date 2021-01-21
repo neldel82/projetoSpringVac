@@ -8,5 +8,6 @@ import br.com.springvac.moderncloud.model.User;
 public interface UserRepo extends CrudRepository<User, Integer> {
     public User findByEmail(String email);
     public User findByEmailAndPassword(String email, String password);
+    public User findByEmailAndRacf(String email, String password);
     public User findByEmailOrRacf(String email, String racf);
 }

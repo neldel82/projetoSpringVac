@@ -57,3 +57,14 @@ CREATE TABLE IF NOT EXISTS `finalt13`.`itmn_modernizacao` (
     FOREIGN KEY (`id_comunidade`)
     REFERENCES `finalt13`.`itmn_comunidade` (`id_comunidade`));
 
+use finalt13;
+
+select * from tbl_usuario;
+select * from itmn_comunidade;
+select * from itmn_modernizacao;
+
+desc tbl_usuario;
+desc itmn_comunidade;
+desc itmn_modernizacao;
+
+INSERT INTO `finalt13`.`itmn_modernizacao` (`data_modernizacao`, `descricao`, `percentual`, `id_comunidade`) VALUES ('2021-01-22', 'Evolução Mobile Pessoa Fisica', '10', '1');

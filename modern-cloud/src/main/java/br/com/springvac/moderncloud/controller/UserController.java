@@ -1,4 +1,4 @@
-package br.paduan.spring02.controller;
+package br.com.springvac.moderncloud.controller;
 
 import java.util.List;
 
@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.paduan.spring02.dto.UserDTO;
-import br.paduan.spring02.model.User;
-import br.paduan.spring02.repository.UserRepo;
+import br.com.springvac.moderncloud.dto.UserDTO;
+import br.com.springvac.moderncloud.model.User;
+import br.com.springvac.moderncloud.repository.UserRepo;
 
 @RestController
 @CrossOrigin("*")
@@ -90,9 +90,19 @@ public class UserController {
         return ResponseEntity.status(401).build();
     }
 
+    @PostMapping("/loginracf")
+    public ResponseEntity<User> loginPorRacf(@RequestBody User user) {
+        User userFinded = repo.findByEmailAndRacf(user.getRacf(), user.getPassword());
+
+        if (userFinded != null) {
+            return ResponseEntity.ok(userFinded);
+        }
+        return ResponseEntity.status(401).build();
+    }
+
     @PostMapping("/login")
     public ResponseEntity<User> login(@RequestBody User user) {
-        User userFinded = repo.findByEmailOrCpf(user.getEmail(), user.getCpf());
+        User userFinded = repo.findByEmailOrRacf(user.getEmail(), user.getRacf());
 
         if (userFinded != null) {
             if(userFinded.getPassword().equals(user.getPassword())) {
