@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gama Academy</title>
+
+        <!-- Chamando uma biblioteca de estilos dentro da página-->
+        <link rel="stylesheet" href="../css/estilos.css">
+</head>
+
+<body>
+    <!-- Criando um menu no cabeçalho da página-->
+    <table border="0" width="100%" class="menu">
+        <tr>
+            <td align="center"><a href="../html/index.html"><img src="../imagens/logo.png" width="200" height="50"></a> </td>
+            <td align="right">QUEM SOMOS</td>
+            <td align="right">CURSOS ONLINE</td>
+            <td align="right">PARA EMPRESAS</td>
+            <td align="right">CONTATO</td>
+            <td align="right">CONTEÚDOS</td>
+        </tr>
+    </table>
+
+    <!-- Criando o formulário de contatos-->
+    <br><br>
+    <form id="formulario_cadastro" method="POST" >
+        <!-- Permite deixar o formulário dentro de uma caixa / container-->
+        <fieldset>
+            <legend><b>PREENCHA OS CAMPOS ABAIXO PARA FAZER OS NOSSOS CURSOS</b><br></legend>
+            <label>Nome:</label><input type="text" name="nome" class="campo_nome" required><br><br>
+            <label>E-mail:</label><input type="email" name="email" class="campo_email" required><br><br>
+            <label>Senha:</label><input type="password" name="senha" class="campo_senha" required><br><br>
+            <label>Insira o seu Genero:</label>
+            <input type="radio" name="opcao_radio" value="Feminino" /> <span>Feminino</span>
+            <input type="radio" name="opcao_radio" value="Masculino" /> <span>Masculino</span>
+            <input type="radio" name="opcao_radio" value="Outros" /> <span>Outros</span><br><br>
+
+            <label>Escolha o curso de deseja fazer:</label>
+            <select>
+                <option value="Não Escolheu"></option>
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="JS">JS</option>
+                <option value="XML">XML</option>
+            </select><br><br>
+
+            <label>Escolha qual o horário deseja cursar:</label>
+            <input type="checkbox"  name="opcao_check" value="manhã"> <span>Manhã</span>
+            <input type="checkbox"  name="opcao_check" value="tarde"> <span>Tarde</span>
+            <input type="checkbox"  name="opcao_check" value="noite"> <span>Noite</span><br><br>
+
+            <label>Informe a data que deseja cursar:</label><input type="date" name="data"><br><br>
+            <label>Mensagem</label><br>
+            <textarea cols=50 rows="6" name="mensagem"></textarea><br><br>
+            <label>Insira um comprovante de residência:</label>
+            <input type="file" name="arquivo"><br><br>
+
+            <input type="submit" value="Enviar">
+        </fieldset>
+    </form>
+
+</body>
+
+</html>
