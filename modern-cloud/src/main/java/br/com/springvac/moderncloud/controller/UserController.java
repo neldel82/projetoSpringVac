@@ -29,7 +29,7 @@ public class UserController {
         User user = repo.findById(id).orElse(null);
 
         if (user != null) {
-            user.setPassword("*******");
+            user.setSenha("*******");
             return ResponseEntity.ok(user); // 200
         }
         return ResponseEntity.notFound().build(); // 404
@@ -82,7 +82,7 @@ public class UserController {
 
     @PostMapping("/loginemail")
     public ResponseEntity<User> loginPorEmail(@RequestBody User user) {
-        User userFinded = repo.findByEmailAndPassword(user.getEmail(), user.getPassword());
+        User userFinded = repo.findByEmailAndSenha(user.getEmail(), user.getSenha());
 
         if (userFinded != null) {
             return ResponseEntity.ok(userFinded);
@@ -92,7 +92,7 @@ public class UserController {
 
     @PostMapping("/loginracf")
     public ResponseEntity<User> loginPorRacf(@RequestBody User user) {
-        User userFinded = repo.findByEmailAndRacf(user.getRacf(), user.getPassword());
+        User userFinded = repo.findByRacfAndSenha(user.getRacf(), user.getSenha());
 
         if (userFinded != null) {
             return ResponseEntity.ok(userFinded);
@@ -105,7 +105,7 @@ public class UserController {
         User userFinded = repo.findByEmailOrRacf(user.getEmail(), user.getRacf());
 
         if (userFinded != null) {
-            if(userFinded.getPassword().equals(user.getPassword())) {
+            if(userFinded.getSenha().equals(user.getSenha())) {
                 return ResponseEntity.ok(userFinded);
             }
         }

@@ -25,10 +25,10 @@ public class Comunidade {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) 
     @Column(name = "id_comunidade")
-    private int id;
+    private int idComunidade;
 
     @Column(name = "nome_comunidade", length = 100, nullable = false)
-    private String descricao;
+    private String nomeComunidade;
 
     @ManyToOne
     @JoinColumn(name = "id_usuario") // nome da coluna na tabela

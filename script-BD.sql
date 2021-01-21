@@ -68,3 +68,17 @@ desc itmn_comunidade;
 desc itmn_modernizacao;
 
 INSERT INTO `finalt13`.`itmn_modernizacao` (`data_modernizacao`, `descricao`, `percentual`, `id_comunidade`) VALUES ('2021-01-22', 'Evolução Mobile Pessoa Fisica', '10', '1');
+
+UPDATE `finalt13`.`itmn_comunidade` SET `nome_comunidade` = 'Canais' WHERE (`id_comunidade` = '1');
+UPDATE `finalt13`.`itmn_comunidade` SET `nome_comunidade` = 'Pagamentos' WHERE (`id_comunidade` = '2');
+INSERT INTO `finalt13`.`itmn_comunidade` (`nome_comunidade`, `id_usuario`) VALUES ('Cartoes', '1');
+INSERT INTO `finalt13`.`itmn_comunidade` (`nome_comunidade`, `id_usuario`) VALUES ('Iti', '1');
+
+INSERT INTO `finalt13`.`tbl_usuario` (`email`, `linkfoto`, `nome`, `racf`, `senha`) VALUES ('marina@itau.com.br', '../images/foto_marina.png', 'Marina Hamada', 'yhamada', '111111');
+
+
+UPDATE `finalt13`.`itmn_comunidade` SET `id_usuario` = '2' WHERE (`id_comunidade` = '2');
+UPDATE `finalt13`.`itmn_comunidade` SET `id_usuario` = '2' WHERE (`id_comunidade` = '3');
+
+select * from itmn_comunidade where id_usuario = 2;
+select * from itmn_comunidade where id_usuario = 1;

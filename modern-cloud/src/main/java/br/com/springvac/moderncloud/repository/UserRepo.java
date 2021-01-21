@@ -7,7 +7,7 @@ import br.com.springvac.moderncloud.model.User;
 // CRUD - Create, Read, Update, Delete
 public interface UserRepo extends CrudRepository<User, Integer> {
     public User findByEmail(String email);
-    public User findByEmailAndPassword(String email, String password);
-    public User findByEmailAndRacf(String email, String password);
+    public User findByEmailAndSenha(String email, String senha);
+    public User findByRacfAndSenha(String racf, String senha);
     public User findByEmailOrRacf(String email, String racf);
 }

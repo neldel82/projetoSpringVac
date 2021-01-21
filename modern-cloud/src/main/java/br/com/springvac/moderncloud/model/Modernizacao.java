@@ -22,10 +22,10 @@ public class Modernizacao {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) 
     @Column(name = "num_seq")
-    private int num_seq;
+    private int numSeq;
 
     @Column(name = "data_modernizacao", nullable = true)
-    private String data_modernizacao;
+    private String dataModernizacao;
 
     @Column(name = "descricao", length = 100, nullable = false)
     private String descricao;
