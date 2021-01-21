@@ -1,0 +1,85 @@
+p{
+    color:green;
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* text-align: center; */
+}
+
+h1{
+    color: rgb(3, 3, 65);
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+body{
+    background-color: rgb(215, 219, 175);
+}
+
+.menu{
+    color: rgb(3, 3, 65);
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+label{
+    color: rgb(3, 3, 65);
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+span{
+    color: rgb(3, 3, 65);
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.campo_nome{
+    position: relative;
+    left: 30px;
+    width: 220px;
+    color: rgb(255, 0, 0);
+    background-color: rgb(245, 245, 135);
+}
+
+.campo_email{
+    position: relative;
+    left: 30px;
+    width: 280px;
+    color: rgb(255, 0, 0);
+    background-color: rgb(245, 245, 135);
+}
+
+.campo_senha{
+    position: relative;
+    left: 30px;
+    width: 100px;
+    color: rgb(255, 0, 0);
+    background-color: rgb(245, 245, 135);
+}
+
+#formulario_cadastro{
+    background-color: rgb(164, 165, 126);
+}
+
+.container{
+    border:3px solid red;
+    width: 500px;
+}
+
+.div1{
+    background-color: yellow;
+
+}
+.div2{
+    background-color: rgb(33, 185, 28);
+}
+
+.div3{
+    background-color: rgb(18, 176, 216);
+}
+
+.div4{
+    background-color: rgb(235, 43, 43);
+}
