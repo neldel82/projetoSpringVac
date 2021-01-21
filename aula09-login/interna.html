@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/js/interna.js"></script>
+    <title>Dashboard</title>
+</head>
+
+<body onload="validaLogin()">
+    <p>Dashboard</p>
+
+    <input type="text" id="idUser">
+    <button onclick="buscarAnuncios()">buscar</button>
+
+    <br><br>
+
+    <div id="dadosAnuncios"></div>
+
+    <br><br>
+    
+    <button onclick="logout()">Logout</button>
+</body>
+
+</html>
