@@ -1,12 +1,12 @@
-package br.paduan.spring02.repository;
+package br.com.springvac.moderncloud.repository;
 
 import org.springframework.data.repository.CrudRepository;
 
-import br.paduan.spring02.model.User;
+import br.com.springvac.moderncloud.model.User;
 
 // CRUD - Create, Read, Update, Delete
 public interface UserRepo extends CrudRepository<User, Integer> {
     public User findByEmail(String email);
     public User findByEmailAndPassword(String email, String password);
-    public User findByEmailOrCpf(String email, String cpf);
+    public User findByEmailOrRacf(String email, String racf);
 }

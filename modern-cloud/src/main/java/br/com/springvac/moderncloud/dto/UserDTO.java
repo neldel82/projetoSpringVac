@@ -1,6 +1,6 @@
-package br.paduan.spring02.dto;
+package br.com.springvac.moderncloud.dto;
 
-import br.paduan.spring02.model.User;
+import br.com.springvac.moderncloud.model.User;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -11,7 +11,7 @@ public class UserDTO {
     private String email;
 
     public UserDTO(User user) {
-        this.name = user.getName();
+        this.name = user.getNome();
         this.email = user.getEmail();
     }
 

@@ -1,4 +1,4 @@
-package br.paduan.spring02.model;
+package br.com.springvac.moderncloud.model;
 
 import java.util.List;
 
@@ -16,7 +16,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity // classe mapeada no BD
-@Table(name = "user")
+@Table(name = "tbl_usuario")
 @Getter
 @Setter
 public class User {
@@ -25,20 +25,23 @@ public class User {
     @Column(name = "id")
     private int id;
 
-    @Column(name = "name", length = 150, nullable = false)
-    private String name;
-
     @Column(name = "email", length = 100, nullable = false, unique = true)
     private String email;
-    
-    @Column(name = "cpf", length = 11, nullable = false, unique = true)
-    private String cpf;
 
-    @Column(name = "password", length = 30, nullable = false)
+    @Column(name = "linkfoto", length = 200, nullable = true)
+    private String linkfoto;
+
+    @Column(name = "nome", length = 100, nullable = false)
+    private String nome;
+
+    @Column(name = "racf", length = 7, nullable = false, unique = true)
+    private String racf;
+
+    @Column(name = "senha", length = 30, nullable = false)
     private String password;
 
-    @OneToMany(mappedBy = "usuario") // atributo na classe Anuncio
-    @JsonIgnoreProperties("usuario") // atributo do 'Anuncio' que não deve ser preenchido
-    private List<Anuncio> anuncios;
+    @OneToMany(mappedBy = "id_usuario") // atributo na classe Comunidade
+    @JsonIgnoreProperties("id_usuario") // atributo do 'Comunidade' que não deve ser preenchido
+    private List<Comunidade> comunidades;
 
 }
