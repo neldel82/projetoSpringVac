@@ -9,14 +9,15 @@ function hello() {
     document.getElementById('output').innerHTML = texto
 } */
 
-function login() {
-    let usuario = document.getElementById('user').value
-    let senha = document.getElementById('password').value
+function login(event) {
+    event.preventDefault()
+    let usuario = document.getElementById('userLogin').value
+    let senha = document.getElementById('userPassword').value
 
     // construindo um objeto javascript para enviar
     let loginMsg = {
         email: usuario,
-        cpf: usuario,
+        racf: usuario,
         password: senha
     }
 
@@ -51,5 +52,5 @@ function tratarRetorno(retorno) {
 function acessoPermitido(user) {
     //console.log(user)
     localStorage.setItem('userLogged', JSON.stringify(user))
-    window.location = 'interna.html'
+    window.location = 'tela_diretor.html'
 }

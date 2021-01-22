@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela Diretor</title>
+
+    <!-- Chamada da biblioteca do CSS do Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    <!-- Chamando uma biblioteca de estilos dentro da página -->
+     <link rel="stylesheet" href="../css/estilos.css">
+
+     <script src="../js/diretor.js"></script>
+    
+</head>
+
+<body onload="validaLogin()">
+
+    <form>
+        <!-- Permite deixar o formulário dentro de uma caixa / container-->
+        <fieldset>
+            <legend><b>MINHAS COMUNIDADES</b><br></legend>
+            
+            <label>Comunidade Canais</label>
+            <button onclick="alert('Oi')">Novo</button>
+            <button type="submit">Extrato</button><br>
+
+            <label>Comunidade Pagamentos</label>
+            <button type="submit">Novo</button>
+            <button type="submit">Extrato</button><br>
+
+
+            <label>Comunidade Cartoes</label>
+            <button type="submit">Novo</button>
+            <button type="submit">Extrato</button><br>
+
+            <label>Comunidade Iti</label>
+            <button type="submit">Novo</button>
+            <button type="submit">Extrato</button><br>
+          
+
+            
+            <button onclick="logout()" >Logout</button>
+        
+          
+        </fieldset>
+    </form>
+    
+    
+     
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+
+    <!-- Chamada da biblioteca do CSS do Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    <!-- Chamando uma biblioteca de estilos dentro da página -->
+    <link rel="stylesheet" href="../css/estilos.css">
+
+    <script src="/js/login.js"></script>
+
+</head>
+
+<body>
+
+    <div class="box-parent-login">
+        <div class="well bg-white box-login">
+            <h1 class="ls-login-logo">Pagina1: Login</h1>
+            <form role="form">
+                <fieldset>
+
+                    <div class="form-group ls-login-user">
+                        <label for="userLogin">Usuário</label><br>
+                        <input class="form-control ls-login-bg-user input-lg" id="userLogin" type="text"
+                            aria-label="Usuário" placeholder="Usuário">
+                    </div>
+
+                    <div class="form-group ls-login-password">
+                        <label for="userPassword">Senha</label><br>
+                        <input class="form-control ls-login-bg-password input-lg" id="userPassword" type="password"
+                            aria-label="Senha" placeholder="Senha">
+                    </div>
+                        
+                    <input type="submit" onclick="login(event)" value="Entrar" class="btn btn-primary btn-lg btn-block">
+
+                    <div id="output"></div>
+
+
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
