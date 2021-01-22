@@ -8,7 +8,5 @@ import br.com.springvac.moderncloud.model.Comunidade;
 import br.com.springvac.moderncloud.model.User;
 
 public interface ComunidadeRepo extends CrudRepository<Comunidade, Integer> {
-
     public List<Comunidade> findByUsuario(User usuario);
-
 }

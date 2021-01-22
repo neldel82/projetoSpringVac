@@ -31,13 +31,11 @@ public class Comunidade {
     private String nomeComunidade;
 
     @ManyToOne
-    @JoinColumn(name = "id_usuario") // nome da coluna na tabela
-    //@JsonIgnoreProperties("comunidades") // atributo do User que não deve ser preenchido
+    @JoinColumn(name = "id_usuario")
     private User usuario;
 
 
-    @OneToMany(mappedBy = "comunidade") // atributo na classe Modernizacao
-    @JsonIgnoreProperties("comunidade") // atributo da 'Modernizacao' que não deve ser preenchido
+    @OneToMany(mappedBy = "comunidade")
+    @JsonIgnoreProperties("comunidade")
     private List<Modernizacao> modernizacoes;
-
 }

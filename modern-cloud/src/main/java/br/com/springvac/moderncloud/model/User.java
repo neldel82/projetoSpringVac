@@ -10,13 +10,13 @@ import javax.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
-@Entity // classe mapeada no BD
+@Entity
 @Table(name = "tbl_usuario")
 @Getter
 @Setter
 public class User {
-    @Id // chave primária
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // 1, 2, 3,...
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
 
@@ -34,9 +34,4 @@ public class User {
 
     @Column(name = "senha", length = 30, nullable = false)
     private String senha;
-/* 
-    @OneToMany(mappedBy = "usuario") // atributo na classe Comunidade
-    @JsonIgnoreProperties("usuario") // atributo do 'Comunidade' que não deve ser preenchido
-    private List<Comunidade> comunidades;
- */
 }

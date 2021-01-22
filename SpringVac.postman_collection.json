@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "a8dfdab5-9253-43ca-8fb6-13ba53c6e059",
+		"name": "SpringVac",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/user/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"emerson@paduan.pro.br\",\n\t\"senha\": \"1234\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/comunidade/user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"1\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/comunidade/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"comunidade",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/modernizacao/comunidade",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"idComunidade\": \"1\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/modernizacao/modernizacoes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"modernizacao",
+						"modernizacoes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/modernizacao/new",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"dataModernizacao\": \"2021-01-28\",\n\t\"descricao\": \"Evolução Mobile Pessoa Jurídica\",\n\t\"percentual\": 20,\n\t\"comunidade\": {\n\t\t\"idComunidade\": 1\n\t}\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/modernizacao/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"modernizacao",
+						"new"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

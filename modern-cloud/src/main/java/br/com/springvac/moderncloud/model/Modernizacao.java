@@ -1,5 +1,7 @@
 package br.com.springvac.moderncloud.model;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -25,7 +27,7 @@ public class Modernizacao {
     private int numSeq;
 
     @Column(name = "data_modernizacao", nullable = true)
-    private String dataModernizacao;
+    private Date dataModernizacao;
 
     @Column(name = "descricao", length = 100, nullable = false)
     private String descricao;
@@ -34,8 +36,7 @@ public class Modernizacao {
     private float percentual;
 
     @ManyToOne
-    @JoinColumn(name = "id_comunidade") // nome da coluna na tabela
-    @JsonIgnoreProperties("modernizacoes") // atributo da User que não deve ser preenchido
+    @JoinColumn(name = "id_comunidade")
+    @JsonIgnoreProperties("modernizacoes")
     private Comunidade comunidade;
-
 }

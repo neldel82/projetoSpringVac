@@ -14,5 +14,4 @@ public class UserDTO {
         this.name = user.getNome();
         this.email = user.getEmail();
     }
-
 }
