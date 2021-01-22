@@ -4,93 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gama Academy</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="../css/estilo.css">
 
-    <!-- Chamando uma biblioteca de estilos dentro da página-->
-    <link rel="stylesheet" href="../css/estilos.css">
+    <script type="text/javascript" src="../js/login.js"></script>
 
-    <!--Criando tipos de estilos em CSS
-    <style>
-        p{
-          color:green;
-          font-size: 14px;
-          font-family: Verdana, Geneva, Tahoma, sans-serif; 
-          /*text-align: center;*/
-        }
-        h1{
-            color:rgb(3, 3, 65);
-            font-size:30px;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            font-weight: bold;
-        }
-
-        body{
-            background-color: rgb(215, 219, 175);
-        }
-
-        .menu{
-            color:rgb(3, 3, 65);
-            font-size:16px;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            font-weight: bold;
-        }
-
-    </style>-->
-
+    <title>Login</title>
 </head>
 
 <body>
-    <!-- Criando um menu no cabeçalho da página-->
-    <table border="0" width="100%" class="menu">
-        <tr>
-            <td align="center"><img src="../imagens/logo.png" width="200" height="50"></td>
-            <td align="right">QUEM SOMOS</td>
-            <td align="right">CURSOS ONLINE</td>
-            <td align="right">PARA EMPRESAS</td>
-            <td align="right"><a href="../html/contato.html">CONTATO</a> </td>
-            <td align="right">CONTEÚDOS</td>
-        </tr>
-    </table>
-    <!--Criação de tabela para montagem do layout-->
-    <table border="0" align="center" width="100%">
-        <!-- TR permite criar linhas dentro da tabela-->
-        <tr>
-            <!-- TD permite criar colunas-->
-            <td align="center">
-                <!-- Inserindo uma imagem na estrutura da página-->
-                <img src="../imagens/pessoas.png">
-            </td>
-            <td>
-                <!-- Comando utilizado para criar um título-->
-                <h1>ISTO NÃO É<br>UMA ESCOLA</h1>
-                <p>Esse lema nos trouxe até aqui!<br>
-                    Somos diferentes e visionários.</p>
-                <p>Tão inexplicáveis que <b>era mais simples dizer o que não éramos</b></p>
-                <p>Marca inovadora e questionadora por essência,
-                    questionou a si mesmo <br> sobre <b>como se reinventar</b>
-                    em um momento de <strike>crise</strike>
-                    oportunidade para <br> chegar ainda mais perto do seu objetivo
-                    de impactar 1 milhão de vidas.</p>
+    <div class="container d-flex h-100">
+        <div class="row align-items-center w-100">
+            <div class="col-8 mx-auto">
+                <div class="jumbotron">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="text-center" id="output"></div>
+                        </div>
+                    </div>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="e-mail / racf" id="userLogin">
+                            <input type="password" class="form-control" placeholder="senha"  id="userPassword">
+                        </div>
+                        <div class="col text-center">
+                            <button type="submit" class="btn btn-outline-primary"
+                                onclick="login(event)">Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
 
-                <!-- comentando o link com botão 
-                <!-- inserindo um link para abertura de uma página
-                <a href="https://www.youtube.com/watch?v=YmfBy9mihL0" target="blank">
-                    <!-- Inserindo o botão para vídeo
-                    <img src="../imagens/play.gif" width="80" height="80"> 
-
-                </a>-->
-
-                <!-- inserindo o componente de vídeo na página-->
-                <video controls= autoplay="true" width="400" height="300">
-                    <source src="../videos/gama.mp4" />
-
-                </video>
-            </td>
-        </tr>
-    </table>
-
-
+    </div>
 </body>
 
 </html>

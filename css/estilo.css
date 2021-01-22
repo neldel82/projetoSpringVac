@@ -1,0 +1,20 @@
+body,html{
+    height: 100%;
+}
+
+.form-control{
+    margin-bottom: 15px;
+}
+
+
+#msgError{
+    color: red;
+}
+
+.row{
+    margin-top: 5px;
+}
+
+#tabela{
+    margin-top: 30px;
+}

@@ -19,7 +19,7 @@ function validaLogin() {
 
 function logout() {
     localStorage.removeItem("userLogged");
-    window.location = "/index.html";
+    window.location = "index.html";
 }
 
 function carregar(user) {
@@ -62,7 +62,7 @@ function novaModernizacao(idComunidade, nomeComunidade) {
         nomeComunidade
     }
     localStorage.setItem("comunidade", JSON.stringify(comunidade));
-    window.location = "novo_formulario.html";
+    window.location = "inserir.html";
 }
 
 function exibirModernizacao(idComunidade, nomeComunidade) {

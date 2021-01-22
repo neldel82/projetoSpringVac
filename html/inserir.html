@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+
+    <!-- Chamada da biblioteca do CSS do Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    <!-- Chamando uma biblioteca de estilos dentro da página -->
+    <link rel="stylesheet" href="../css/estilos.css">
+
+    <script src="../js/inserir.js"></script>
+
+</head>
+
+<body onload="validaLogin()">
+    <div class="container align-items-center h-100">
+        <div class="row align-items-center">
+            <div class="row w-100">
+                <div class="col-1" style="margin-right:0px;">
+                    <div id="imgUser"></div>
+                </div>
+                <div class="col-8 my-auto" style="margin-left:0px;">
+                    <h2 id="comunidade"></h2>
+                </div>
+                <div class="col">
+                    <button class="btn btn-secondary" onclick="logout()">Logout</button>
+                </div>
+            </div>
+
+            <div class="row align-items-center w-100">
+                <div class="col-8 mx-auto">
+                    <div class="row justify-content-center">
+                        <h4>Cadastro de Nova Modernização</h4>
+                    </div>
+                    <div class="row " id="tabela">
+                        <input class="form-control" type="date" id="data">
+                        <input class="form-control" type="text" id="descricao">
+                        <input type="number" class="form-control" id="porcentagem">
+                        <button class="btn btn-primary" onclick="inserir()">Inserir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
