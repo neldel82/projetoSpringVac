@@ -18,7 +18,7 @@ function login(event) {
     let loginMsg = {
         email: usuario,
         racf: usuario,
-        password: senha
+        senha: senha
     }
 
     // construindo uma mensagem que será enviada ao backend

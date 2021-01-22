@@ -28,7 +28,28 @@ public class ModernizacaoController {
 
     @PostMapping("/new")
     public ResponseEntity<Modernizacao> novaModernizacao(@RequestBody Modernizacao modernizacao) {
+
+        double porcentagem = repo.somaPorcentagem(modernizacao.getComunidade().getIdComunidade(),modernizacao.getDataModernizacao().getYear());
+        
+        if (porcentagem + modernizacao.getPercentual() >= 100) {
+            return ResponseEntity.status(400).build();
+        }
+
+        Object obj = repo.existe(modernizacao.getComunidade().getIdComunidade(), modernizacao.getDataModernizacao().getYear(), modernizacao.getDataModernizacao().getMonthValue());
+
+        if (obj != null) {
+            return ResponseEntity.status(400).build();
+        }
+
         Modernizacao newModernizacao = repo.save(modernizacao);
         return ResponseEntity.ok(newModernizacao);
+    }
+
+    @PostMapping("/porcentagem")
+    public double calculaPorcentagem(@RequestBody Modernizacao modernizacao) {
+
+        double porcentagem = repo.somaPorcentagem(modernizacao.getComunidade().getIdComunidade(),modernizacao.getDataModernizacao().getYear());
+
+        return porcentagem;
     }
 }
