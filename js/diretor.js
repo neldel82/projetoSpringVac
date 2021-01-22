@@ -1,41 +1,75 @@
 function validaLogin() {
-    let userTxt = localStorage.getItem('userLogged')
+    let userTxt = localStorage.getItem("userLogged");
+
     if (!userTxt) {
-        window.location = 'login.html'
+        window.location = "login.html";  
     }
+
+    let user = JSON.parse(userTxt);  // transforma texto no objeto
+
+    document.getElementById("imgUser").innerHTML = `<img src="${user.linkFoto}">`;
+    document.getElementById("user").innerHTML = `${user.nome} (${user.racf})`;
+
+/*     "texto" + user.nome
+    'testo' + user.nome
+    `texto ${user.nome}`  */
+
+    carregar(user);
 }
 
 function logout() {
-    localStorage.removeItem('userLogged')
-    window.location = 'login.html'
+    localStorage.removeItem("userLogged");
+    window.location = "/index.html";
 }
 
-function buscarAnuncios() {
-    let idUser = document.getElementById('idUser').value
-    // 'fetch' - método padrão 'GET'
-    fetch('http://localhost:8080/user/id/' + idUser)
-        .then(res => tratarRetorno(res))
-}
+function carregar(user) {
 
-function tratarRetorno(dados) {
-    if(dados.status == 200){
-        dados.json().then(res => exibirAnuncios(res))
-    } else {
-        document.getElementById('dadosAduncios').innerHTML = 'Usuário não existe.'
+    let usuario = {
+        id: user.id
     }
-}
 
-function exibirAnuncios(usuario) {
-    // console.log(usuario)
-    if (usuario.anuncios.length == 0) { // length - tamanho do array de 'anuncios'
-        document.getElementById('dadosAduncios').innerHTML = 'Unsuário não possui anúncios'
-    } else {
-        let anuncios = usuario.anuncios
-        let dados = '<table> <tr> <th>Descrição</th> <th>Valor</th> </tr>'
-        for (let i = 0; i < anuncios.length; i++) {
-            dados += '<tr><td>' + anuncios[i].descricao + '</td><td>' + anuncios[i].valor + '<td></tr>'
+    let msg = {
+        method: 'POST',
+        body: JSON.stringify(usuario),
+        headers: {
+            'Content-type': 'application/json'
         }
-        dados += '</table>'
-        document.getElementById('dadosAduncios').innerHTML = dados
     }
+
+    fetch("http://localhost:8080/comunidade/user", msg)
+        .then(res => res.json())
+        .then(res => preenche(res));
+}
+
+function preenche(comunidades) {
+    let tabelaComunidades = '<table class="table table-sm"> <tr> <th>Nome</th> <th></th> </tr>';
+    
+    for (i = 0; i < comunidades.length; i++) {
+        tabelaComunidades = tabelaComunidades + `<tr> 
+                            <td> ${comunidades[i].nomeComunidade} </td> 
+                            <td class="text-center"> <button class="btn btn-sm btn-outline-success" onclick="novaModernizacao(${comunidades[i].idComunidade}, '${comunidades[i].nomeComunidade}')">NOVO</button> 
+                            <button class="btn btn-sm btn-outline-primary" onclick="exibirModernizacao(${comunidades[i].idComunidade}, '${comunidades[i].nomeComunidade}')">EXTRATO</button> </td> 
+                        </tr>`;
+    }
+    tabelaComunidades += '</table>';
+    document.getElementById("tabela").innerHTML = tabelaComunidades;
+
+}
+
+function novaModernizacao(idComunidade, nomeComunidade) {
+    let comunidade ={
+        idComunidade,
+        nomeComunidade
+    }
+    localStorage.setItem("comunidade", JSON.stringify(comunidade));
+    window.location = "novo_formulario.html";
+}
+
+function exibirModernizacao(idComunidade, nomeComunidade) {
+    let comunidade ={
+        idComunidade,
+        nomeComunidade
+    }
+    localStorage.setItem("comunidade", JSON.stringify(comunidade));
+    window.location = "listar.html";
 }

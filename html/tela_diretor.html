@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,44 +12,37 @@
 
 
     <!-- Chamando uma biblioteca de estilos dentro da página -->
-     <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/estilos.css">
 
-     <script src="../js/diretor.js"></script>
-    
+    <script src="../js/diretor.js"></script>
+
 </head>
 
 <body onload="validaLogin()">
+    <div class="container align-items-center h-100">
+        <div class="row align-items-center">
+            <div class="row w-100">
+                <div class="col-1" style="margin-right:0px;">
+                    <div id="imgUser"></div>
+                </div>
+                <div class="col-8 my-auto" style="margin-left:0px;">
+                    <h2 id="user"></h2>
+                </div>
+                <div class="col">
+                    <button class="btn btn-secondary" onclick="logout()">Logout</button>
+                </div>
+            </div>
 
-    <form>
-        <fieldset>
-            <legend><b>MINHAS COMUNIDADES</b><br></legend>
-            
-            <label>Comunidade Canais</label>
-            <button onclick="alert('Oi')">Novo</button>
-            <button type="submit">Extrato</button><br>
-
-            <label>Comunidade Pagamentos</label>
-            <button type="submit">Novo</button>
-            <button type="submit">Extrato</button><br>
-
-
-            <label>Comunidade Cartoes</label>
-            <button type="submit">Novo</button>
-            <button type="submit">Extrato</button><br>
-
-            <label>Comunidade Iti</label>
-            <button type="submit">Novo</button>
-            <button type="submit">Extrato</button><br>
-          
-
-            
-            <button onclick="logout()" >Logout</button>
-        
-          
-        </fieldset>
-    </form>
-    
-    
-     
+            <div class="row align-items-center w-100">
+                <div class="col-8 mx-auto">
+                    <div class="row justify-content-center">
+                        <h4>Minhas Comunidades</h4>
+                    </div>
+                    <div class="row " id="tabela"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
