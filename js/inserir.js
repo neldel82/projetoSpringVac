@@ -56,3 +56,7 @@ function tratarResultado(res) {
                 alert('Erro no cadastro...');
             }
 }
+
+function voltar() {
+    window.location = "tela_diretor.html"
+}

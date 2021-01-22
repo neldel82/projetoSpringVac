@@ -33,7 +33,7 @@ public class ModernizacaoController {
 
         double porcentagem = repo.somaPorcentagem(modernizacao.getComunidade().getIdComunidade(),modernizacao.getDataModernizacao().getYear());
         
-        if (porcentagem + modernizacao.getPercentual() >= 100) {
+        if (porcentagem + modernizacao.getPercentual() > 100) {
             return ResponseEntity.status(400).build();
         }
 

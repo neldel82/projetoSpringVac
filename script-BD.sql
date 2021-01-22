@@ -80,6 +80,3 @@ select * from itmn_modernizacao;
 desc tbl_usuario;
 desc itmn_comunidade;
 desc itmn_modernizacao;
-
-select * from itmn_comunidade where id_usuario = 2;
-select * from itmn_comunidade where id_usuario = 1;
