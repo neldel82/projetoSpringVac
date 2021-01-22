@@ -1,6 +1,6 @@
-function hello() {
+/* function hello() {
     alert('Helo World!')
-}
+} */
 
 /* function login() {
     let usuario = document.getElementById('user')
@@ -18,7 +18,7 @@ function login(event) {
     let loginMsg = {
         email: usuario,
         racf: usuario,
-        password: senha
+        senha: senha
     }
 
     // construindo uma mensagem que será enviada ao backend
