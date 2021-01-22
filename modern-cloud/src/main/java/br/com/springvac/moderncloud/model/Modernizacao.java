@@ -1,6 +1,6 @@
 package br.com.springvac.moderncloud.model;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -27,7 +27,7 @@ public class Modernizacao {
     private int numSeq;
 
     @Column(name = "data_modernizacao", nullable = true)
-    private Date dataModernizacao;
+    private LocalDate dataModernizacao;
 
     @Column(name = "descricao", length = 100, nullable = false)
     private String descricao;
